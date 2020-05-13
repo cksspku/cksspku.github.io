@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[page]]></title>
+    <title><![CDATA[springboot使用第三方jar]]></title>
     <url>%2F2020%2F05%2F13%2Fspringboot%2Fspringboot%E5%8A%A0%E8%BD%BD%E7%AC%AC%E4%B8%89%E6%96%B9jar%2F</url>
     <content type="text"><![CDATA[SpringBoot引入将第三方jar一、导入jar 在dependency中指定jar 其中groupId、artifactId、version、可随意填写 scope必须为system systemPath为jar包路径 ${project.basedir}为项目根目录 123456789&lt;!-- 农行网上支付平台--&gt; &lt;dependency&gt; &lt;groupId&gt;com.abc.ebusclient&lt;/groupId&gt; &lt;artifactId&gt;ebusclient&lt;/artifactId&gt; &lt;version&gt;3.1.8&lt;/version&gt; &lt;scope&gt;system&lt;/scope&gt;&lt;!-- &lt;systemPath&gt;$&#123;project.basedir&#125;/src/main/resources/lib/TrustPayClient-V3.1.8.jar&lt;/systemPath&gt;--&gt; &lt;systemPath&gt;$&#123;project.basedir&#125;/lib/TrustPayClient-V3.1.8.jar&lt;/systemPath&gt; &lt;/dependency&gt; 打包配置，需要在build-plugins中配置 123456789&lt;!--如果是打jar包，则需在build的plugins中添加如下配置--&gt; &lt;plugin&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt; &lt;configuration&gt; &lt;!--值为true是指打包时包含scope为system的第三方Jar包--&gt; &lt;includeSystemScope&gt;true&lt;/includeSystemScope&gt; &lt;/configuration&gt; &lt;/plugin&gt; 二、指定classptsh下配置文件​ 第三方jar需要指定位置配置文件，比如classpath，在Springboot中，main/resources目录为默认classpath ​ 当通过true无法打入jar，可通过pom.xml文件中的resource指定，配置如下： 12345678910111213141516&lt;resources&gt; &lt;!-- 必须配置，将配置文件打包到classpath--&gt; &lt;resource&gt; &lt;directory&gt;src/main/resources&lt;/directory&gt; &lt;/resource&gt; &lt;!-- 必须，否则打包时无法将jar打入指定lib--&gt; &lt;resource&gt; &lt;!--&lt;directory&gt;src/main/resources/lib&lt;/directory&gt;--&gt; &lt;directory&gt;$&#123;project.basedir&#125;/lib&lt;/directory&gt; &lt;targetPath&gt;BOOT-INF/lib/&lt;/targetPath&gt; &lt;includes&gt; &lt;include&gt;**/*.jar&lt;/include&gt; &lt;/includes&gt; &lt;/resource&gt;&lt;/resources&gt;]]></content>
+      <categories>
+        <category>springboot</category>
+      </categories>
+      <tags>
+        <tag>springboot</tag>
+        <tag>工具</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Hexo Next主题相关设置]]></title>
@@ -111,7 +118,7 @@
   <entry>
     <title><![CDATA[hexo常用命令]]></title>
     <url>%2F2019%2F10%2F27%2Fhexo%2Fhexo%E4%BD%BF%E7%94%A8%E6%96%87%E7%AB%A0%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87%2F</url>
-    <content type="text"><![CDATA[生成新的文章 -p：表示path 路径 hexo/hexo：表示在_posts目录下生成 hexo/hexo.md文件（有一层文件夹） 1hexo new page -p hexo/hexo 生成本地生成静态文件：hexo g将本地静态文件推送至Github：hexo d在文章中使用图片 在hexo根目录配置文件_config.yml设置属性 1post_asset_folder:true 在hexo的目录下执行 1npm install https://github.com/CodeFalling/hexo-asset-image --save 使用图片 1![logo](hexo使用文章使用图片/a.jpg)]]></content>
+    <content type="text"><![CDATA[生成新的文章 -p：表示path 路径 hexo/hexo：表示在_posts目录下生成 hexo/hexo.md文件（有一层文件夹） 1hexo new page -p hexo/hexo 设置文章摘要​ 在内容中插入一行 1&lt;!-- more --&gt; ​ 效果如下 ​ 生成本地生成静态文件：hexo g将本地静态文件推送至Github：hexo d在文章中使用图片 在hexo根目录配置文件_config.yml设置属性 1post_asset_folder:true 在hexo的目录下执行 1npm install https://github.com/CodeFalling/hexo-asset-image --save 使用图片 1![logo](hexo使用文章使用图片/a.jpg)]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
