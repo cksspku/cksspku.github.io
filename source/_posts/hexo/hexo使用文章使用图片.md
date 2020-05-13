@@ -16,6 +16,20 @@ category: Hexo
 hexo new page -p hexo/hexo
 ```
 
+### 设置文章摘要
+
+​	在内容中插入一行
+
+```bash
+ <!-- more -->
+```
+
+![](F:\cksspk\githexoBlog\cksspku.github.io\source\_posts\hexo\hexo使用文章使用图片\1-1.png)
+
+​	效果如下
+
+​	![](F:\cksspk\githexoBlog\cksspku.github.io\source\_posts\hexo\hexo使用文章使用图片\1-2.png)
+
 ### 生成本地生成静态文件：`hexo g`
 
 ### 将本地静态文件推送至Github：`hexo d`
