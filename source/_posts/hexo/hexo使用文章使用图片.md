@@ -24,11 +24,11 @@ hexo new page -p hexo/hexo
  <!-- more -->
 ```
 
-![](F:\cksspk\githexoBlog\cksspku.github.io\source\_posts\hexo\hexo使用文章使用图片\1-1.png)
+![](hexo使用文章使用图片/1-1.png)
 
 ​	效果如下
 
-​	![](F:\cksspk\githexoBlog\cksspku.github.io\source\_posts\hexo\hexo使用文章使用图片\1-2.png)
+​	![](hexo使用文章使用图片/1-2.png)
 
 ### 生成本地生成静态文件：`hexo g`
 
