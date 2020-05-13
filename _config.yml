@@ -88,5 +88,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/cksspk/cksspk.github.io.git
+  repo: https://github.com/cksspku/cksspku.github.io.git
   branch: master
